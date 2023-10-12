@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from .models import OutputBayers, ImputBayers
 from typing import List
-from resolvers import get_bayers, get_bayer, add_bayer, update_bayer, delete_bayer
+from .models import OutputBayers, ImputBayers
+from .resolvers import get_bayers, get_bayer, add_bayer, update_bayer, delete_bayer
 
 
 router = APIRouter()

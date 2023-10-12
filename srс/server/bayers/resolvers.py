@@ -1,5 +1,5 @@
 from srс.server.database.db_manager import base_manager
-from models import OutputBayers, ImputBayers
+from .models import OutputBayers, ImputBayers
 
 ID = 0
 NAME = 1

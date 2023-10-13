@@ -1,16 +1,15 @@
-import sys
-from PyQt6 import QtWidgets
-from client.ui import main_form_ui
+# import sys
+from PyQt6.QtWidgets import QMainWindow
+from PyQt6.QtCore import pyqtSignal
+from client.ui.main_form_ui import Ui_MainWindow as Ui_MainForm
 
 
-class LogginForm(QtWidgets.QMainWindow, main_form_ui.Ui_MainWindow):
+class MainForm(QMainWindow, Ui_MainForm):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
 
-if __name__ == '__main__':
-    app = QtWidgets.QApplication(sys.argv)
-    window = LogginForm()
-    window.show()
-    app.exec()
+    def set_user_data(self, bayer_id: int, bayer_fio: str):
+        self.bayer_id = bayer_id
+        self.bayer_fio = bayer_fio
